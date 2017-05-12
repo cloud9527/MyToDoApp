@@ -18,6 +18,8 @@
         </activity>
         <activity android:name=".BaseActivity">
         </activity>
+        <activity android:name=".addTask.AddTaskActivity">
+        </activity>
     </application>
 
 </manifest>
