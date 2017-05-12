@@ -258,7 +258,7 @@ public class TasksFragment extends Fragment implements TasksContract.View {
 
     @Override
     public boolean isActive() {
-        return false;
+        return isAdded();
     }
 
     @Override
