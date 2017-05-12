@@ -94,7 +94,10 @@ public class TasksPresenter implements TasksContract.Presenter {
 
             @Override
             public void onDataNotAvailable() {
-
+                if (!mTasksView.isActive()) {
+                    return;
+                }
+                mTasksView.showLoadingTasksError();
             }
         });
 
