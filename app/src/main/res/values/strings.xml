@@ -10,8 +10,8 @@
     <string name="menu_clear">Clear completed</string>
     <string name="menu_delete_task">Delete task</string>
     <string name="navigation_view_header_title">TO-DOs</string>
-    <string name="title_hint">Title</string>
-    <string name="description_hint">Enter your TO-DO here.</string>
+    <string name="title_hint">标题</string>
+    <string name="description_hint">请输入内容</string>
     <string name="empty_task_message">TO DOs cannot be empty</string>
     <string name="successfully_saved_task_message">TO-DO saved</string>
     <string name="list_title">TO-DO List</string>

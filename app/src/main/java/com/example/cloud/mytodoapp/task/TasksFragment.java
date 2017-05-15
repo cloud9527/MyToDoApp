@@ -24,6 +24,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.cloud.mytodoapp.R;
+import com.example.cloud.mytodoapp.addTask.AddTaskActivity;
 import com.example.cloud.mytodoapp.bean.Task;
 
 import java.util.ArrayList;
@@ -181,7 +182,8 @@ public class TasksFragment extends Fragment implements TasksContract.View {
 
     @Override
     public void showAddTask() {
-        Toast.makeText(getActivity(), "showAddTask", Toast.LENGTH_SHORT).show();
+        Intent intent = new Intent(getContext(), AddTaskActivity.class);
+        startActivityForResult(intent, AddTaskActivity.REQUEST_ADD_TASK);
     }
 
     @Override

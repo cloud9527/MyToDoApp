@@ -93,6 +93,7 @@ public class TasksActivity extends BaseActivity {
 
     @OnClick(R.id.fab_add_task)
     public void onClick() {
+        mTasksPresenter.addNewTask();
     }
 
 
@@ -129,7 +130,7 @@ public class TasksActivity extends BaseActivity {
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
 
-        switch (item.getItemId()){
+        switch (item.getItemId()) {
             case android.R.id.home:
                 mDrawerLayout.openDrawer(GravityCompat.START);
                 break;

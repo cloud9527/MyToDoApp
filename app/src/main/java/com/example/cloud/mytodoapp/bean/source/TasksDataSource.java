@@ -32,6 +32,8 @@ import java.util.List;
  */
 public interface TasksDataSource {
 
+
+
     interface LoadTasksCallback {
 
         void onTasksLoaded(List<Task> tasks);

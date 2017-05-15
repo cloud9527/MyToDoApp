@@ -1,11 +1,11 @@
 package com.example.cloud.mytodoapp.addTask;
 
-import android.app.ActionBar;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.design.widget.CoordinatorLayout;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v4.widget.DrawerLayout;
+import android.support.v7.app.ActionBar;
 import android.support.v7.widget.Toolbar;
 import android.widget.FrameLayout;
 
@@ -34,6 +34,7 @@ public class AddTaskActivity extends BaseActivity {
     private ActionBar mActionBar;
 
     private AddTaskPresenter mAddEditTaskPresenter;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -49,7 +50,8 @@ public class AddTaskActivity extends BaseActivity {
     }
 
     protected void initView(Bundle savedInstanceState) {
-        mActionBar = getActionBar();
+        setSupportActionBar(mToolbar);
+        mActionBar = getSupportActionBar();
         mActionBar.setDisplayHomeAsUpEnabled(true);
         mActionBar.setDisplayShowHomeEnabled(true);
 
@@ -81,6 +83,8 @@ public class AddTaskActivity extends BaseActivity {
                 Injection.provideTasksRepository(getApplicationContext()),
                 taskFragment,
                 shouldLoadDataFromRepo);
+        taskFragment.setPresenter(mAddEditTaskPresenter);
+
     }
 
     @Override
