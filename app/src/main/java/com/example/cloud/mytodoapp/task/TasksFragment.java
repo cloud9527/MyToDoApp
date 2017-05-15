@@ -1,4 +1,4 @@
-package com.example.cloud.mytodoapp.job;
+package com.example.cloud.mytodoapp.task;
 
 import android.content.Intent;
 import android.os.Bundle;

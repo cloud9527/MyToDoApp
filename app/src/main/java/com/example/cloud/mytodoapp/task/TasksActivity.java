@@ -1,4 +1,4 @@
-package com.example.cloud.mytodoapp.job;
+package com.example.cloud.mytodoapp.task;
 
 import android.os.Bundle;
 import android.support.annotation.NonNull;

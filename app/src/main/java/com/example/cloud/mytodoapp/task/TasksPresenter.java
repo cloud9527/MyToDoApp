@@ -1,4 +1,4 @@
-package com.example.cloud.mytodoapp.job;
+package com.example.cloud.mytodoapp.task;
 
 import android.support.annotation.NonNull;
 
@@ -9,7 +9,7 @@ import com.example.cloud.mytodoapp.bean.source.TasksRepository;
 import java.util.ArrayList;
 import java.util.List;
 
-import static com.example.cloud.mytodoapp.job.TasksFilterType.ALL_TASKS;
+import static com.example.cloud.mytodoapp.task.TasksFilterType.ALL_TASKS;
 import static com.google.common.base.Preconditions.checkNotNull;
 
 /**
