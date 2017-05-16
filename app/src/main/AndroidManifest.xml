@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          xmlns:tools="http://schemas.android.com/tools"
           package="com.example.cloud.mytodoapp">
 
     <application
@@ -17,8 +18,18 @@
             </intent-filter>
         </activity>
         <activity android:name=".addTask.AddTaskActivity"/>
-        <activity android:name=".taskdetail.TaskDetailActivity">
+        <activity android:name=".taskdetail.TaskDetailActivity"/>
+
+        <activity
+            android:name="com.example.cloud.mytodoapp.statistics.StatisticsActivity"
+            android:parentActivityName="com.example.cloud.mytodoapp.task.TasksActivity"
+            tools:ignore="UnusedAttribute">
+            <!-- Parent activity meta-data to support 4.0 and lower -->
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.cloud.mytodoapp.task.TasksActivity"/>
         </activity>
+
     </application>
 
 </manifest>

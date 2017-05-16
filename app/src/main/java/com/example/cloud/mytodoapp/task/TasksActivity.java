@@ -1,5 +1,6 @@
 package com.example.cloud.mytodoapp.task;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.CoordinatorLayout;
@@ -11,12 +12,12 @@ import android.support.v7.app.ActionBar;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 import android.widget.FrameLayout;
-import android.widget.Toast;
 
 import com.example.cloud.mytodoapp.ActivityUtils;
 import com.example.cloud.mytodoapp.BaseActivity;
 import com.example.cloud.mytodoapp.R;
 import com.example.cloud.mytodoapp.bean.Injection;
+import com.example.cloud.mytodoapp.statistics.StatisticsActivity;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -103,11 +104,9 @@ public class TasksActivity extends BaseActivity {
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
                 switch (item.getItemId()) {
                     case R.id.list_navigation_menu_item:
-                        Toast.makeText(TasksActivity.this, "list_navigation_menu_item", Toast.LENGTH_SHORT).show();
                         break;
                     case R.id.statistics_navigation_menu_item:
-                        Toast.makeText(TasksActivity.this, "statistics_navigation_menu_item", Toast.LENGTH_SHORT).show();
-
+                        startActivity(new Intent(TasksActivity.this, StatisticsActivity.class));
                         break;
                     default:
                         break;
