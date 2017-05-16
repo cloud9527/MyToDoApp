@@ -1,7 +1,9 @@
 package com.example.cloud.mytodoapp.task;
 
+import android.app.Activity;
 import android.support.annotation.NonNull;
 
+import com.example.cloud.mytodoapp.addTask.AddTaskActivity;
 import com.example.cloud.mytodoapp.bean.Task;
 import com.example.cloud.mytodoapp.bean.source.TasksDataSource;
 import com.example.cloud.mytodoapp.bean.source.TasksRepository;
@@ -37,7 +39,10 @@ public class TasksPresenter implements TasksContract.Presenter {
 
     @Override
     public void result(int requestCode, int resultCode) {
-
+        // If a task was successfully added, show snackbar
+        if (AddTaskActivity.REQUEST_ADD_TASK == requestCode && Activity.RESULT_OK == resultCode) {
+            mTasksView.showSuccessfullySavedMessage();
+        }
     }
 
     @Override

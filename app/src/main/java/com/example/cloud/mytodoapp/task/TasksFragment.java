@@ -21,11 +21,11 @@ import android.widget.ListView;
 import android.widget.PopupMenu;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.example.cloud.mytodoapp.R;
 import com.example.cloud.mytodoapp.addTask.AddTaskActivity;
 import com.example.cloud.mytodoapp.bean.Task;
+import com.example.cloud.mytodoapp.taskdetail.TaskDetailActivity;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -188,7 +188,9 @@ public class TasksFragment extends Fragment implements TasksContract.View {
 
     @Override
     public void showTaskDetailsUi(String taskId) {
-        Toast.makeText(getActivity(), "taskId", Toast.LENGTH_SHORT).show();
+        Intent intent = new Intent(getContext(), TaskDetailActivity.class);
+        intent.putExtra(TaskDetailActivity.EXTRA_TASK_ID, taskId);
+        startActivity(intent);
     }
 
     @Override

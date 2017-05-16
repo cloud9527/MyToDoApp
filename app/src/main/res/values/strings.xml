@@ -39,4 +39,5 @@
     <string name="no_tasks_completed">You have no completed TO-DOs!</string>
     <string name="no_tasks_add">Add a TO-DO item +</string>
     <string name="refresh">Refresh</string>
+    <string name="delete_task">删除任务</string>
 </resources>

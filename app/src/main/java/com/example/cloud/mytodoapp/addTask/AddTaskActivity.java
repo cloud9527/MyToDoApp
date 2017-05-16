@@ -109,4 +109,10 @@ public class AddTaskActivity extends BaseActivity {
             mActionBar.setTitle(R.string.edit_task);
         }
     }
+
+    @Override
+    public boolean onSupportNavigateUp() {
+        onBackPressed();
+        return true;
+    }
 }
